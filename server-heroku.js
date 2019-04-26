@@ -9,7 +9,7 @@ const hport = process.env.PORT || 3000;
 app.set('view engine', 'hbs');
 app.use(express.static(__dirname + '/public'));
 
-app.get('/landing', (req, res) => {
+app.get('/', (req, res) => {
   res.render('landing.hbs', {
     pageTitle: 'Landing Page',
     welcomeMessage: 'Welcome to my website',
